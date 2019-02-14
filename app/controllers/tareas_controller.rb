@@ -10,6 +10,7 @@ class TareasController < ApplicationController
   # GET /tareas/1
   # GET /tareas/1.json
   def show
+    @tareas_concluidas = Concluido.where(completed: true)
   end
 
   # GET /tareas/new
@@ -61,9 +62,6 @@ class TareasController < ApplicationController
     end
   end
 
-  def concluidos
-
-  end 
 
   private
     # Use callbacks to share common setup or constraints between actions.

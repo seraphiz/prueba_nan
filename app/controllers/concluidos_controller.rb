@@ -12,4 +12,5 @@ class ConcluidosController < ApplicationController
         concluido.save
         redirect_to root_path, notice: 'Wena OE Tiki Tiki Ti!'
     end 
+
 end

@@ -10,6 +10,15 @@
   <%= image_tag @tarea.image %>
 </p>
 
+<h4>Personas que ya concluyeron esta tarea:</h4>
+
+  <ol>
+    <% @tareas_concluidas.each do |concluidas| %>
+      <li> <%= concluidas.id.user.email %> - <%= concluidas.id.tarea.title %></li>
+    <% end %>
+
+  </ol>
+
 
 <%= link_to 'Back', tareas_path %>
 
