@@ -1,0 +1,7 @@
+<h1>Mis Tareas Concluida OE OE Tiki Tiki Tii!</h1>
+
+<ul class="list-group">
+    <% @tarea_concluida.each do |tconcluida| %>
+        <li class="list-group-item"> <%= tconcluida.tarea.title %> - <%= image_tag tconcluida.tarea.image, size: '50' %></li>
+    <% end %>
+</ul>

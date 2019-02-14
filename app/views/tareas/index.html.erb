@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Tareas</h1>
+
 <div class="row">
 <% @tareas.each do |tarea| %>
   <div class="card col-sm-3 text-center">
@@ -8,6 +9,11 @@
     <div class="card-body">
       <h5 class="card-title"><%= tarea.title %></h5>
       <%= link_to 'Show', tarea, class:"btn btn-primary" %>
+      <% if user_signed_in? %>
+        <%= link_to 'Completar? OE', tarea_concluidos_path(tarea), class:"btn btn-success", method: :post %>
+        
+      <% end %>
+        
     </div>
   </div>
   <% end %>
