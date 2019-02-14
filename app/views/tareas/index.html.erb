@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tareas</h1>
+<div class="row">
+<% @tareas.each do |tarea| %>
+  <div class="card col-sm-3 text-center">
+    <img src="<%= tarea.image %>" class="card-img-top img-fluid" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"><%= tarea.title %></h5>
+      <%= link_to 'Show', tarea, class:"btn btn-primary" %>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+<br>
+
+<%= link_to 'New Tarea', new_tarea_path %>
