@@ -8,10 +8,10 @@
 
     <% if user_signed_in? %>
       <li class="nav-item">
-        <a class="nav-link" href="">Hola 18chero <%= current_user.email %> | </a>
+        <a class="nav-link" href="<%= root_path %>">Hola 18chero <%= current_user.email %> | </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<%= concluidos_path %>">Mis Tareas (<%= current_user.tareas.count %>) | </a>
+        <a class="nav-link" href="<%= concluidos_path %>">Mis Tareas (<%= current_user.tareas.count %>/11) | </a>
       </li>
       <li class="nav-item">
       <%= link_to 'Cerrar sesión', destroy_user_session_path, method: :delete, class: 'nav-link' %>

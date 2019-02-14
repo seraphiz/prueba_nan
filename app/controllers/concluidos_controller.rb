@@ -13,4 +13,10 @@ class ConcluidosController < ApplicationController
         redirect_to root_path, notice: 'Wena OE Tiki Tiki Ti!'
     end 
 
+    #def concluido_update
+    #     @concluido = Concluido.find(params[:concluido_id])
+    #       @concluido.completed = false
+    #       @concluido.save
+    #       redirect_to root_path, notice: 'No completado!'
+    # end 
 end

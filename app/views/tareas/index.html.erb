@@ -11,7 +11,7 @@
       <%= link_to 'Show', tarea, class:"btn btn-primary" %>
       <% if user_signed_in? %>
         <% if current_user.concluidos.pluck(:tarea_id).include? tarea.id %>
-          <%= link_to 'Incompleta :(', '#', class:"btn btn-danger" %>
+          <%= link_to 'Incompleta :(', '#', class:"btn btn-danger", method: :patch %>
         
         <% else %>
         <%= link_to 'Completar? OE', tarea_concluidos_path(tarea), class:"btn btn-success", method: :post %>
@@ -22,7 +22,3 @@
   </div>
   <% end %>
 </div>
-
-<br>
-
-<%= link_to 'New Tarea', new_tarea_path %>

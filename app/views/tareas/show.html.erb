@@ -14,7 +14,7 @@
 
   <ol>
     <% @tareas_concluidas.each do |concluidas| %>
-      <li> <%= concluidas.id.user.email %> - <%= concluidas.id.tarea.title %></li>
+      <li> <%= concluidas.user.email %> - <%= concluidas.tarea.title %></li>
     <% end %>
 
   </ol>
