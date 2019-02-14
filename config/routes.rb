@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :tareas do
-    resources :concluidos, only: [:create]
+    resources :concluidos, only: [:create, :update] do
+    end
   end 
   devise_for :users
 
